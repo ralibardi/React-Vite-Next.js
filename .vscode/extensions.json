@@ -1,0 +1,37 @@
+{
+  "recommendations": [
+    // Essential for Next.js/React/TypeScript
+    "biomejs.biome",
+    "dbaeumer.vscode-eslint",
+    "bradlc.vscode-tailwindcss",
+
+    // TypeScript & JavaScript
+    "ms-vscode.vscode-typescript-next",
+
+    // React Development
+    "dsznajder.es7-react-js-snippets",
+    "formulahendry.auto-rename-tag",
+
+    // Git
+    "eamodio.gitlens",
+
+    // Code Quality
+    "usernamehw.errorlens",
+    "christian-kohler.path-intellisense",
+
+    // Productivity
+    "ms-vscode.vscode-json",
+    "redhat.vscode-yaml",
+    "ms-vscode.vscode-markdown",
+
+    // Debugging
+    "ms-vscode.js-debug",
+
+    // UI Enhancements
+    "pkief.material-icon-theme",
+    "zhuangtongfa.material-theme"
+  ],
+  "unwantedRecommendations": [
+    "esbenp.prettier-vscode" // Using Biome instead
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    // Next.js App Router - Route files
+    "page.tsx": "page.module.*, page.test.*, page.spec.*, page.types.ts, page.types.tsx",
+    "layout.tsx": "layout.module.*, layout.test.*, layout.spec.*, layout.types.ts, layout.types.tsx",
+    "loading.tsx": "loading.module.*, loading.test.*, loading.spec.*",
+    "error.tsx": "error.module.*, error.test.*, error.spec.*",
+    "not-found.tsx": "not-found.module.*, not-found.test.*, not-found.spec.*",
+    "template.tsx": "template.module.*, template.test.*, template.spec.*",
+    "route.ts": "route.test.*, route.spec.*, route.types.ts",
+    "route.tsx": "route.test.*, route.spec.*, route.types.ts, route.types.tsx",
+
+    // Next.js App Router - Special files
+    "actions.ts": "actions.test.*, actions.spec.*, actions.types.ts",
+    "actions.tsx": "actions.test.*, actions.spec.*, actions.types.ts, actions.types.tsx",
+
+    // React Components
+    "*.tsx": "${capture}.module.*, ${capture}.test.*, ${capture}.spec.*, ${capture}.types.*, ${capture}.stories.*",
+    "*.ts": "${capture}.d.ts, ${capture}.test.*, ${capture}.spec.*, ${capture}.types.*",
+
+    // Styles
+    "*.css": "${capture}.css.map, ${capture}.module.css, ${capture}.module.css.map",
+    "*.scss": "${capture}.scss.map, ${capture}.module.scss, ${capture}.module.scss.map",
+    "*.sass": "${capture}.sass.map, ${capture}.module.sass, ${capture}.module.sass.map",
+
+    // Configuration files
+    "package.json": "package-lock.json, pnpm-lock.yaml, yarn.lock, .npmrc, .yarnrc",
+    "tsconfig.json": "tsconfig.*.json",
+    "next.config.*": ".env, .env.*, next-env.d.ts",
+    "biome.json": ".biomeignore",
+    "postcss.config.*": "tailwind.config.*",
+
+    // Test files
+    "*.test.ts": "${capture}.test.ts.snap, ${capture}.test.ts.map",
+    "*.test.tsx": "${capture}.test.tsx.snap, ${capture}.test.tsx.map",
+    "*.spec.ts": "${capture}.spec.ts.snap, ${capture}.spec.ts.map",
+    "*.spec.tsx": "${capture}.spec.tsx.snap, ${capture}.spec.tsx.map"
+  },
+
+  // Editor Settings (2025 Best Practices)
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "biomejs.biome",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.biome": "explicit"
+  },
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.rulers": [80, 120],
+  "editor.wordWrap": "on",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.inlineSuggest.enabled": true,
+  "editor.suggestSelection": "first",
+  "editor.snippetSuggestions": "top",
+
+  // TypeScript Settings
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.suggest.autoImports": true,
+  "typescript.preferences.importModuleSpecifier": "relative",
+
+  // JavaScript/TypeScript Language Features
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.suggest.autoImports": true,
+  "javascript.preferences.importModuleSpecifier": "relative",
+
+  // File Associations
+  "files.associations": {
+    "*.css": "css",
+    "*.scss": "scss",
+    "*.module.css": "css",
+    "*.module.scss": "scss"
+  },
+
+  // File Exclusions (reduce noise in explorer)
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "**/.next": true,
+    "**/out": true,
+    "**/.turbo": true
+  },
+
+  // Search Exclusions
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.next": true,
+    "**/out": true,
+    "**/.turbo": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/*.min.js": true,
+    "**/*.min.css": true,
+    "**/package-lock.json": true,
+    "**/pnpm-lock.yaml": true,
+    "**/yarn.lock": true
+  },
+
+  // Files Watcher Exclusions (improve performance)
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/.next/**": true,
+    "**/out/**": true,
+    "**/.turbo/**": true,
+    "**/dist/**": true,
+    "**/build/**": true
+  },
+
+  // Emmet (for faster HTML/JSX writing)
+  "emmet.includeLanguages": {
+    "typescript": "html",
+    "typescriptreact": "html"
+  },
+  "emmet.triggerExpansionOnTab": true,
+
+  // CSS/SCSS Settings
+  "css.validate": true,
+  "scss.validate": true,
+  "css.lint.unknownAtRules": "ignore", // For Tailwind directives
+
+  // Tailwind CSS IntelliSense
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cn\\(([^)]*)\\)", "(?:'|\"|`)([^\"'`]*)(?:'|\"|`)"]
+  ],
+
+  // Git Settings
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+
+  // Terminal Settings
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.fontSize": 13,
+
+  // Breadcrumbs (helpful for navigation)
+  "breadcrumbs.enabled": true,
+  "breadcrumbs.filePath": "on",
+  "breadcrumbs.symbolPath": "on",
+
+  // Minimap
+  "editor.minimap.enabled": true,
+  "editor.minimap.maxColumn": 120,
+
+  // Performance
+  "files.maxMemoryForLargeFilesMB": 4096,
+  "extensions.ignoreRecommendations": false
+}
