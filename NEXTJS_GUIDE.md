@@ -1,4 +1,4 @@
-# Next.js (App Router) — ADHD‑friendly guide for this repo
+# Next.js (App Router)
 
 If you only read one section, read **“The mental model”**.
 
@@ -22,7 +22,7 @@ Key files:
 
 ---
 
-## The mental model (copy/paste into your brain)
+## The mental model
 
 ### 1) App Router defaults to **Server Components**
 
@@ -63,7 +63,7 @@ In this repo, you’ll see:
 
 ---
 
-## What is a “static page” (SSG) in plain English?
+## What is a “static page” (SSG)?
 
 Static = “**baked**” ahead of time.
 

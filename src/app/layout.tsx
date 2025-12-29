@@ -47,6 +47,7 @@ export default function RootLayout({
       {/* `antialiased` and font variables apply to the whole app */}
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning
       >
         {children}
       </body>
