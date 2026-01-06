@@ -125,6 +125,12 @@ export default function Home() {
             >
               API Example
             </Link>
+            <Link
+              href="/server-actions"
+              className="flex h-10 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-4 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] sm:w-auto sm:px-6 whitespace-nowrap"
+            >
+              Server Actions Demo
+            </Link>
           </div>
         </div>
       </main>
