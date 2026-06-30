@@ -73,7 +73,7 @@ export async function createUser(formData: FormData) {
     };
   }
 
-  if (!email || !email.includes("@")) {
+  if (!email?.includes("@")) {
     return {
       success: false,
       error: "Please provide a valid email address",
@@ -143,7 +143,7 @@ export async function updateUser(formData: FormData) {
     };
   }
 
-  if (!email || !email.includes("@")) {
+  if (!email?.includes("@")) {
     return {
       success: false,
       error: "Please provide a valid email address",
@@ -260,7 +260,7 @@ export async function patchUser(formData: FormData) {
 
   if (ageStr !== null && ageStr !== undefined && ageStr.trim().length > 0) {
     const age = Number(ageStr);
-    if (isNaN(age) || age < 0 || age > 150) {
+    if (Number.isNaN(age) || age < 0 || age > 150) {
       return {
         success: false,
         error: "Age must be between 0 and 150",

@@ -7,7 +7,7 @@ import { ComponentBoundaryNotes } from "@/components/shared/ComponentBoundaryNot
  * API Example Page
  * ---------------
  * This page demonstrates calling a .NET 10 API from a Next.js Client Component.
- * 
+ *
  * Key Points:
  * - The page itself is a Server Component (default in App Router)
  * - The ApiCaller component is a Client Component (handles clicks)
@@ -51,8 +51,11 @@ export default function ApiExamplePage() {
             </h2>
             <p className="text-base leading-7 text-zinc-600 dark:text-zinc-400">
               This example calls a .NET 10 API directly from the browser. Make
-              sure to set <code className="px-1.5 py-0.5 bg-zinc-100 dark:bg-zinc-800 rounded text-xs">NEXT_PUBLIC_API_URL</code> in your
-              environment variables.
+              sure to set{" "}
+              <code className="px-1.5 py-0.5 bg-zinc-100 dark:bg-zinc-800 rounded text-xs">
+                NEXT_PUBLIC_API_URL
+              </code>{" "}
+              in your environment variables.
             </p>
             <ApiCaller
               apiUrl={
@@ -97,10 +100,7 @@ export default function ApiExamplePage() {
               </code>
               .
             </p>
-            <ApiCaller
-              apiUrl="/api/proxy?endpoint=/data"
-              method="GET"
-            />
+            <ApiCaller apiUrl="/api/proxy?endpoint=/data" method="GET" />
           </div>
 
           <div className="flex flex-col gap-4 mt-4 p-4 bg-zinc-50 dark:bg-zinc-900 rounded-lg">
@@ -114,7 +114,11 @@ export default function ApiExamplePage() {
                 </h4>
                 <ol className="list-decimal list-inside space-y-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
                   <li>
-                    Create a <code className="px-1.5 py-0.5 bg-zinc-100 dark:bg-zinc-800 rounded text-xs">.env.local</code> file in your project root
+                    Create a{" "}
+                    <code className="px-1.5 py-0.5 bg-zinc-100 dark:bg-zinc-800 rounded text-xs">
+                      .env.local
+                    </code>{" "}
+                    file in your project root
                   </li>
                   <li>
                     Add your .NET 10 API URL:{" "}
@@ -123,8 +127,11 @@ export default function ApiExamplePage() {
                     </code>
                   </li>
                   <li>
-                    <strong>Important:</strong> Only use <code className="px-1.5 py-0.5 bg-zinc-100 dark:bg-zinc-800 rounded text-xs">NEXT_PUBLIC_*</code> for
-                    values safe to expose to the browser
+                    <strong>Important:</strong> Only use{" "}
+                    <code className="px-1.5 py-0.5 bg-zinc-100 dark:bg-zinc-800 rounded text-xs">
+                      NEXT_PUBLIC_*
+                    </code>{" "}
+                    for values safe to expose to the browser
                   </li>
                 </ol>
               </div>
@@ -134,7 +141,11 @@ export default function ApiExamplePage() {
                 </h4>
                 <ol className="list-decimal list-inside space-y-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
                   <li>
-                    Add to <code className="px-1.5 py-0.5 bg-zinc-100 dark:bg-zinc-800 rounded text-xs">.env.local</code>:{" "}
+                    Add to{" "}
+                    <code className="px-1.5 py-0.5 bg-zinc-100 dark:bg-zinc-800 rounded text-xs">
+                      .env.local
+                    </code>
+                    :{" "}
                     <code className="px-1.5 py-0.5 bg-zinc-100 dark:bg-zinc-800 rounded text-xs">
                       DOTNET_API_URL=https://your-api.com/api
                     </code>
@@ -170,4 +181,3 @@ export default function ApiExamplePage() {
     </div>
   );
 }
-

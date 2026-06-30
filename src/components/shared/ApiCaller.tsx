@@ -3,7 +3,7 @@
 // Client Component - API Caller
 // -----------------------------
 // This component demonstrates calling a .NET 10 API from a Next.js client component.
-// 
+//
 // Why Client Component?
 // - Needs to handle onClick events (user interaction)
 // - Needs useState for loading/error states
@@ -179,4 +179,3 @@ export function ApiCaller({
     </section>
   );
 }
-

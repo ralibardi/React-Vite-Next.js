@@ -55,7 +55,9 @@ export default function StaticPage() {
               rebuild and redeploy.
             </p>
             <p className="text-base leading-7 text-zinc-600 dark:text-zinc-400">
-              <strong className="text-black dark:text-zinc-50">Build time:</strong>{" "}
+              <strong className="text-black dark:text-zinc-50">
+                Build time:
+              </strong>{" "}
               {BUILD_TIME_ISO}
             </p>
           </div>

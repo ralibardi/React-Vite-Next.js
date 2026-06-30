@@ -39,9 +39,9 @@ export default function Home() {
               Next.js Rendering Strategies Demo
             </h1>
             <p className="text-lg leading-7 text-zinc-600 dark:text-zinc-400 max-w-2xl">
-              This application demonstrates different rendering strategies in Next.js,
-              helping you understand when and how to use static pages, ISR, and dynamic
-              rendering.
+              This application demonstrates different rendering strategies in
+              Next.js, helping you understand when and how to use static pages,
+              ISR, and dynamic rendering.
             </p>
           </div>
 
@@ -60,9 +60,10 @@ export default function Home() {
                 >
                   Next.js
                 </Link>{" "}
-                is a React framework for building full-stack web applications. It provides
-                powerful features like server-side rendering, static site generation, and
-                API routes, making it easier to build fast, SEO-friendly applications.
+                is a React framework for building full-stack web applications.
+                It provides powerful features like server-side rendering, static
+                site generation, and API routes, making it easier to build fast,
+                SEO-friendly applications.
               </p>
             </div>
 
@@ -71,12 +72,12 @@ export default function Home() {
                 Static Pages (SSG)
               </h2>
               <p className="text-base leading-7 text-zinc-600 dark:text-zinc-400 max-w-2xl">
-                Static pages are pre-rendered at <strong>build time</strong> and served as
-                static HTML files. They're incredibly fast because the HTML is already
-                generated and can be cached by CDNs. Use static pages for content that
-                doesn't change frequently, like blog posts, documentation, or marketing
-                pages. The content only updates when you rebuild and redeploy the
-                application.
+                Static pages are pre-rendered at <strong>build time</strong> and
+                served as static HTML files. They're incredibly fast because the
+                HTML is already generated and can be cached by CDNs. Use static
+                pages for content that doesn't change frequently, like blog
+                posts, documentation, or marketing pages. The content only
+                updates when you rebuild and redeploy the application.
               </p>
             </div>
 
@@ -85,11 +86,12 @@ export default function Home() {
                 ISR (Incremental Static Regeneration)
               </h2>
               <p className="text-base leading-7 text-zinc-600 dark:text-zinc-400 max-w-2xl">
-                ISR combines the benefits of static pages with the ability to update
-                content without rebuilding. Pages are statically generated at build time,
-                but can be regenerated in the background after a specified time interval
-                (revalidation period) or on-demand via API calls. This is perfect for
-                content that changes occasionally but doesn't need to be updated on every
+                ISR combines the benefits of static pages with the ability to
+                update content without rebuilding. Pages are statically
+                generated at build time, but can be regenerated in the
+                background after a specified time interval (revalidation period)
+                or on-demand via API calls. This is perfect for content that
+                changes occasionally but doesn't need to be updated on every
                 request, like product listings or news articles.
               </p>
             </div>
@@ -99,9 +101,9 @@ export default function Home() {
                 Try It Out
               </h2>
               <p className="text-base leading-7 text-zinc-600 dark:text-zinc-400 max-w-2xl">
-                Explore the examples below to see how each rendering strategy works in
-                practice. Notice the timestamps and how they change (or don't change)
-                based on the rendering method.
+                Explore the examples below to see how each rendering strategy
+                works in practice. Notice the timestamps and how they change (or
+                don't change) based on the rendering method.
               </p>
             </div>
           </section>

@@ -113,8 +113,8 @@ export async function POST(req: Request) {
     typeof body === "object" &&
     body &&
     "path" in body &&
-    typeof (body as any).path === "string"
-      ? (body as any).path
+    typeof (body as Record<string, unknown>).path === "string"
+      ? ((body as Record<string, unknown>).path as string)
       : null;
 
   // 1) Validate input
