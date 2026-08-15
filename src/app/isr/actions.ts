@@ -21,5 +21,3 @@ export async function revalidateIsrAction() {
   revalidatePath("/isr");
   return { ok: true as const, now: new Date().toISOString() };
 }
-
-

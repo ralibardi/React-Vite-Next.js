@@ -26,11 +26,20 @@ export function ServerRenderInfo({ label, note }: ServerRenderInfoProps) {
 
   return (
     <section className="border border-zinc-300 dark:border-zinc-700 rounded-lg p-3">
-      <h2 className="mb-2 text-lg font-semibold text-black dark:text-zinc-50">{label}</h2>
+      <h2 className="mb-2 text-lg font-semibold text-black dark:text-zinc-50">
+        {label}
+      </h2>
       <p className="mb-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
-        <strong className="text-black dark:text-zinc-50">Server-rendered at:</strong> {serverRenderedAtIso}
+        <strong className="text-black dark:text-zinc-50">
+          Server-rendered at:
+        </strong>{" "}
+        {serverRenderedAtIso}
       </p>
-      {note ? <p className="m-0 text-sm leading-6 text-zinc-600 dark:text-zinc-400">{note}</p> : null}
+      {note ? (
+        <p className="m-0 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+          {note}
+        </p>
+      ) : null}
     </section>
   );
 }

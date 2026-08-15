@@ -1,17 +1,17 @@
-import { NextRequest, NextResponse } from "next/server";
+import { type NextRequest, NextResponse } from "next/server";
 
 /**
  * API Proxy Route
  * --------------
  * This is an optional Next.js API route that acts as a proxy to your .NET 10 API.
- * 
+ *
  * Why use a proxy?
  * - Hide your actual API URL from the client
  * - Add server-side authentication/authorization
  * - Transform requests/responses
  * - Add rate limiting or caching
  * - Keep API keys secret (use server-only env vars)
- * 
+ *
  * Usage:
  * - Call this route from your Client Component: `/api/proxy?endpoint=/your-endpoint`
  * - Or use it directly: POST /api/proxy with body containing the endpoint and data
@@ -29,7 +29,7 @@ export async function GET(req: NextRequest) {
     if (!endpoint) {
       return NextResponse.json(
         { error: "Missing 'endpoint' query parameter" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -52,7 +52,7 @@ export async function GET(req: NextRequest) {
     if (!response.ok) {
       return NextResponse.json(
         { error: `API error: ${response.statusText}` },
-        { status: response.status }
+        { status: response.status },
       );
     }
 
@@ -68,7 +68,7 @@ export async function GET(req: NextRequest) {
       error instanceof Error ? error.message : "Unknown error";
     return NextResponse.json(
       { success: false, error: errorMessage },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
@@ -84,7 +84,7 @@ export async function POST(req: NextRequest) {
     if (!endpoint) {
       return NextResponse.json(
         { error: "Missing 'endpoint' in request body" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -108,7 +108,7 @@ export async function POST(req: NextRequest) {
     if (!response.ok) {
       return NextResponse.json(
         { error: `API error: ${response.statusText}` },
-        { status: response.status }
+        { status: response.status },
       );
     }
 
@@ -124,8 +124,7 @@ export async function POST(req: NextRequest) {
       error instanceof Error ? error.message : "Unknown error";
     return NextResponse.json(
       { success: false, error: errorMessage },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
-
